@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'L4!'
+const prefix = 'b4!'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -28,7 +28,7 @@ client.on('ready', () => {
 });
 
 client.on("message", message => {
-     if (message.content === "L4!help") {
+     if (message.content === "b4!help") {
          message.react('👌')
          if(!message.channel.guild) return message.reply('** This command only for servers **');
         message.reply("** تم الاريسال فـ الخاص :heavy_check_mark: **")
@@ -36,27 +36,27 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
- if (message.content === "L4!help") {
+ if (message.content === "b4!help") {
   const embed = new Discord.RichEmbed()
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
 ╔[❖════════════❖]╗
-                  Prefix = ' L4! '
+                  Prefix = ' b4! '
 ╚[❖════════════❖]╝
 ╔[❖════════════❖]╗
                     اوامر عامة
 ╚[❖════════════❖]╝
-❖ L4!members ➾ معلومات الاعضاء
-❖ L4!avatar ➾ شعار حسابك
-❖ L4!image  ➾ شعار السيرفر
-❖ L4!stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
-❖ L4!id ➾ اي دي
-❖ L4!Date ➾ التاريخ
-❖ L4!ping ➾ عرض سرعه اتصال البوت
-❖ L4!bot ➾ معلومات البوت
-❖ L4!server ➾ معلومات السيرفر
+❖ b4!members ➾ معلومات الاعضاء
+❖ b4!avatar ➾ شعار حسابك
+❖ b4!image  ➾ شعار السيرفر
+❖ b4!stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
+❖ b4!id ➾ اي دي
+❖ b4!Date ➾ التاريخ
+❖ b4!ping ➾ عرض سرعه اتصال البوت
+❖ b4!bot ➾ معلومات البوت
+❖ b4!server ➾ معلومات السيرفر
 **
 `)
 
@@ -68,7 +68,7 @@ message.author.sendEmbed(embed)
 
 //
 client.on('message', message => {
-     if (message.content === "L4!ping") {
+     if (message.content === "b4!ping") {
       const embed = new Discord.RichEmbed()
 
   .setColor("RANDOM")
@@ -80,7 +80,7 @@ client.on('message', message => {
 
 
   client.on("message", message => {
-    var prefix = "L4!";
+    var prefix = "b4!";
 
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -101,7 +101,7 @@ client.on('message', message => {
 });
 //
 client.on('message', message => {
-    if (message.content.startsWith("L4!stats")) {
+    if (message.content.startsWith("b4!stats")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setColor('RANDOM')
@@ -134,7 +134,7 @@ function timeCon(time) {
 
 //
 client.on('message', message => {
-    if (message.content.startsWith("L4!avatar")) {
+    if (message.content.startsWith("b4!avatar")) {
         var mentionned = message.mentions.users.first();
     var iiTzK;
       if(mentionned){
@@ -155,7 +155,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "L4!mute") {
+  if (command === "b4!mute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -189,7 +189,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "L4!unmute") {
+  if (command === "b4!unmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -248,7 +248,7 @@ if (command == "embed") {
 });
 
 client.on('message', message => {
-    if (message.content == 'L4!server') {
+    if (message.content == 'b4!server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
         var اعضاء = message.guild.memberCount
@@ -277,7 +277,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("L4!avatar")) {
+    if (message.content.startsWith("b4!avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -294,7 +294,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if (message.content.startsWith(prefix + "L4!servers")) {
+if (message.content.startsWith(prefix + "b4!servers")) {
          if(!message.author.id === '397737293059981315') return;
 var gimg;
 var gname;
@@ -325,7 +325,7 @@ Server MemberCount : **${gmemb} **
 
 client.on('message', message => {  // ui
 if (!message.channel.guild) return;
-var prefix = "L4!";
+var prefix = "b4!";
   if (message.content ===  prefix + 'ui') {
 let user = message.mentions.users.first();
  if (!user) { user = message.author }
@@ -409,31 +409,31 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-   if (message.content === "L4!roll 1") {
+   if (message.content === "b4!roll 1") {
   message.channel.sendMessage(Math.floor(Math.random() * 25));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "L4!roll 2") {
+   if (message.content === "b4!roll 2") {
   message.channel.sendMessage(Math.floor(Math.random() * 50));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "L4!roll 3") {
+   if (message.content === "b4!roll 3") {
   message.channel.sendMessage(Math.floor(Math.random() * 75));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "L4!roll 4") {
+   if (message.content === "b4!roll 4") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
     }
 });
 
 client.on('message', message => {
-     if (message.content === "L4!bot") {
+     if (message.content === "b4!bot") {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -446,7 +446,7 @@ message.channel.sendEmbed(embed);
 });
 
 client.on('message', message => {
-    if(message.content == 'L4!members') {
+    if(message.content == 'b4!members') {
        message.react(":white_check_mark:")
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
@@ -487,7 +487,7 @@ channel.send({embed : embed});
     });
 
 client.on('message', message => {
-var prefix = "L4!";
+var prefix = "b4!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
@@ -700,7 +700,7 @@ delete warn[message.author.id];
 });
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","♛L4」༄"));
+    member.addRole(member.guild.roles.find("name","♛b4」༄"));
     });
 var dat = JSON.parse(fs.readFileSync('./invite.json', 'utf8'));
 function forEachObject(obj, func) {
