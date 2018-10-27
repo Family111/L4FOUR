@@ -42,9 +42,9 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
-╔[❖════════════❖]╗
+[❖════════════❖]
                   Prefix = ' lf! '
-╚[❖════════════❖]╝
+[❖════════════❖]
 ╔[❖════════════❖]╗
                     اوامر عامة
 ╚[❖════════════❖]╝
