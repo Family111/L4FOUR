@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'F!'
+const prefix = 'lf!'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -28,7 +28,7 @@ client.on('ready', () => {
 });
 
 client.on("message", message => {
-     if (message.content === "F!help") {
+     if (message.content === "lf!help") {
          message.react('👌')
          if(!message.channel.guild) return message.reply('** This command only for servers **');
         message.reply("** تم الاريسال فـ الخاص :heavy_check_mark: **")
@@ -36,27 +36,27 @@ client.on("message", message => {
 });
 
 client.on("message", message => {
- if (message.content === "F!help") {
+ if (message.content === "lf!help") {
   const embed = new Discord.RichEmbed()
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
  **
 [❖════════════❖]
-                  Prefix = ' F! '
+                  Prefix = ' lf! '
 [❖════════════❖]
 ╔[❖════════════❖]╗
                     اوامر عامة
 ╚[❖════════════❖]╝
-❖ F!members ➾ معلومات الاعضاء
-❖ F!avatar ➾ شعار حسابك
-❖ F!image  ➾ شعار السيرفر
-❖ F!stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
-❖ F!id ➾ اي دي
-❖ F!Date ➾ التاريخ
-❖ F!ping ➾ عرض سرعه اتصال البوت
-❖ F!bot ➾ معلومات البوت
-❖ F!server ➾ معلومات السيرفر
+❖ lf!members ➾ معلومات الاعضاء
+❖ lf!avatar ➾ شعار حسابك
+❖ lf!image  ➾ شعار السيرفر
+❖ lf!stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
+❖ lf!id ➾ اي دي
+❖ lf!Date ➾ التاريخ
+❖ lf!ping ➾ عرض سرعه اتصال البوت
+❖ lf!bot ➾ معلومات البوت
+❖ lf!server ➾ معلومات السيرفر
 **
 `)
 
@@ -68,7 +68,7 @@ message.author.sendEmbed(embed)
 
 //
 client.on('message', message => {
-     if (message.content === "F!ping") {
+     if (message.content === "lf!ping") {
       const embed = new Discord.RichEmbed()
 
   .setColor("RANDOM")
@@ -80,7 +80,7 @@ client.on('message', message => {
 
 
   client.on("message", message => {
-    var prefix = "F!";
+    var prefix = "lf!";
 
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -101,7 +101,7 @@ client.on('message', message => {
 });
 //
 client.on('message', message => {
-    if (message.content.startsWith("F!stats")) {
+    if (message.content.startsWith("lf!stats")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setColor('RANDOM')
@@ -134,7 +134,7 @@ function timeCon(time) {
 
 //
 client.on('message', message => {
-    if (message.content.startsWith("F!avatar")) {
+    if (message.content.startsWith("lf!avatar")) {
         var mentionned = message.mentions.users.first();
     var iiTzK;
       if(mentionned){
@@ -155,7 +155,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "F!mute") {
+  if (command === "lf!mute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -189,7 +189,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "F!unmute") {
+  if (command === "lf!unmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -248,7 +248,7 @@ if (command == "embed") {
 });
 
 client.on('message', message => {
-    if (message.content == 'F!server') {
+    if (message.content == 'lf!server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
         var اعضاء = message.guild.memberCount
@@ -277,7 +277,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("F!avatar")) {
+    if (message.content.startsWith("lf!avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -294,7 +294,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if (message.content.startsWith(prefix + "F!servers")) {
+if (message.content.startsWith(prefix + "lf!servers")) {
          if(!message.author.id === '397737293059981315') return;
 var gimg;
 var gname;
@@ -325,7 +325,7 @@ Server MemberCount : **${gmemb} **
 
 client.on('message', message => {  // ui
 if (!message.channel.guild) return;
-var prefix = "F!";
+var prefix = "lf!";
   if (message.content ===  prefix + 'ui') {
 let user = message.mentions.users.first();
  if (!user) { user = message.author }
@@ -409,31 +409,31 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-   if (message.content === "F!roll 1") {
+   if (message.content === "lf!roll 1") {
   message.channel.sendMessage(Math.floor(Math.random() * 25));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "F!roll 2") {
+   if (message.content === "lf!roll 2") {
   message.channel.sendMessage(Math.floor(Math.random() * 50));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "F!roll 3") {
+   if (message.content === "lf!roll 3") {
   message.channel.sendMessage(Math.floor(Math.random() * 75));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "F!roll 4") {
+   if (message.content === "lf!roll 4") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
     }
 });
 
 client.on('message', message => {
-     if (message.content === "F!bot") {
+     if (message.content === "lf!bot") {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -446,7 +446,7 @@ message.channel.sendEmbed(embed);
 });
 
 client.on('message', message => {
-    if(message.content == 'F!members') {
+    if(message.content == 'lf!members') {
        message.react(":white_check_mark:")
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
@@ -487,7 +487,7 @@ channel.send({embed : embed});
     });
 
 client.on('message', message => {
-var prefix = "F!";
+var prefix = "lf!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
